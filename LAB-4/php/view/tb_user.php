@@ -18,11 +18,11 @@ include "../model/condb.php";
         while ($row = mysqli_fetch_assoc($result)) {
         ?>
         <tr>
-            <td><?= $row["user_id"] ?></td>
-            <td><?= $row["user_name"] ?></td>
-            <td><?= $row["user_pass"] ?></td>
-            <td><button class = "btn_del" data = "<?= $row["user_id"]?>">DEL</button></td>
-            <td></td>
+                <td><?= $row['std_id'] ?></td>
+                <td><?= $row['std_name'] ?></td>
+                <td><?= $row['std_sname'] ?></td>
+                <td><button class="btn_edit" data="<?= $row['std_id'] ?>">Edit</button></td>
+                <td><button class="btn_del" data="<?= $row['std_id'] ?>">DEL</button></td>
         </tr>
         <?php
         }
